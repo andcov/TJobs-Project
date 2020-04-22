@@ -16,7 +16,7 @@
 		
 		<br>
 		
-		<form action = "/TJobs/" method = "post">
+		<form action = "/TJobs/SignUpHandler" method = "post">
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "fname"> First Name </label>
@@ -71,12 +71,12 @@
 					<input class="u-full-width" type = "password" id = "passwd" name = "conpasswd" required>
 				</div>
 			</div>
-			
-			<div class="seven columns">
-		  		<input class="button-primary" type="submit" value="Create Account">
+			<div class = "twelve columns">
+				<input class="button-primary" type="submit" value="Create Account">
+				<a href = "signin.jsp"  style = "padding-left: 1%;"> Already have an account? </a>
 		  	</div>
 		</form>
-		
+
 	</body>
 	
 </html>
