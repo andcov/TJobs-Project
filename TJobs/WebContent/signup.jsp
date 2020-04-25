@@ -8,6 +8,7 @@
 		<meta charset="UTF-8">
 		<title>T-Jobs</title>
 		<link rel="stylesheet" type="text/css" href="css/skeleton.css" >
+		<script src="js/SignUpFormHandler.js"></script>
 	
 	</head>
 
@@ -16,7 +17,9 @@
 		
 		<br>
 		
-		<form action = "/TJobs/SignUpHandler" method = "post">
+		<form id = "signUpForm" method = "post">
+		
+			<!-- First Name Field -->
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "fname"> First Name </label>
@@ -24,6 +27,7 @@
 				</div>
 			</div>
 			
+			<!-- Last Name Field -->
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "lname"> Last Name </label>
@@ -31,6 +35,7 @@
 				</div>
 			</div>
 			
+			<!-- Email Field -->
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "email"> Email </label>
@@ -38,6 +43,7 @@
 				</div>
 			</div>
 			
+			<!-- Age Field -->
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "radio"> Age </label>
@@ -51,6 +57,7 @@
 			  	</div>
 		  	</div>
 		  	
+		  	<!-- Description Field -->
 		  	<div class = "twelve columns">
 				<div class="seven columns">
 			  		<label for = "description"> Description </label>
@@ -58,23 +65,37 @@
 	  			</div>
 		  	</div>
 		  	
+		  	<!-- Password Field -->
 		  	<div class = "twelve columns">
 			  	<div class="seven columns">
 					<label for = "passwd"> Password </label>
-					<input class="u-full-width" type = "password" id = "passwd" name = "passwd" required>
+					<input class="u-full-width" type = "password" id = "passwd" name = "passwd" required style = "margin-bottom: 0.2rem;">
+					<div>		
+						<input type = "checkbox" onclick = "showPassword('passwd');" style = "margin-top: 0.2rem;" id = "passwdChBox">
+						<span style = "font-size: 1.2rem;"> Show Password </span>
+					</div>
 				</div>
+				
 			</div>
 			
+			<!-- Confirm Password Field -->
 			<div class = "twelve columns">
 				<div class="seven columns">
 					<label for = "passwd"> Confirm Password </label>
-					<input class="u-full-width" type = "password" id = "passwd" name = "conpasswd" required>
+					<input class="u-full-width" type = "password" id = "conpasswd" name = "conpasswd" required style = "margin-bottom: 0.2rem;">
+					<div>		
+						<input type = "checkbox" onclick = "showPassword('conpasswd');" style = "margin-top: 0.2rem;" id = "conpasswdChBox">
+						<span style = "font-size: 1.2rem;"> Show Password </span>
+				</div>
 				</div>
 			</div>
+			
+			<!-- Submit Field -->
 			<div class = "twelve columns">
-				<input class="button-primary" type="submit" value="Create Account">
+				<input class = "button-primary" type = "button" value = "Create Account" onclick = "clicked();">
 				<a href = "signin.jsp"  style = "padding-left: 1%;"> Already have an account? </a>
-		  	</div>
+	  		</div>
+	  	
 		</form>
 
 	</body>

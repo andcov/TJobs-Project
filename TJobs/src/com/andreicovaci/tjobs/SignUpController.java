@@ -46,7 +46,10 @@ public class SignUpController extends HttpServlet {
 			System.out.println(key + " : " + value[0]);
 		}
 		
-		response.getWriter().print( "<url>" + request.getContextPath() + "/signin.jsp" + "</url>");
+		//response.getWriter().print( "<url>" + request.getContextPath() + "/signin.jsp" + "</url>");
+		response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+		response.getWriter().print("{\"isError\" : \"true\"}");
 		
 		
 	}

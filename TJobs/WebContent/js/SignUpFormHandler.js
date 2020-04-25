@@ -8,7 +8,7 @@ function clicked() {
 	Http.send(FD);
 
 	Http.onreadystatechange = (e) => {
-	  //console.log(Http.responseText)
+	  console.log(Http.responseText)
 	}
 }
 
