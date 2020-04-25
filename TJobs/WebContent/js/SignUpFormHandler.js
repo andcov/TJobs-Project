@@ -8,7 +8,13 @@ function clicked() {
 	Http.send(FD);
 
 	Http.onreadystatechange = (e) => {
-	  console.log(Http.responseText)
+		if (Http.status == 200 && Http.readyState == 4) {
+			let response = Http.responseText;
+			let data = JSON.parse(response);
+			if(data.isError){
+				console.log(data.errors);
+			}
+		}
 	}
 }
 

@@ -15,6 +15,8 @@
 	<body>
 		<h1> Sign Up </h1>
 		
+		<div id = "placeholder"></div>
+		
 		<br>
 		
 		<form id = "signUpForm" method = "post">

@@ -1,6 +1,7 @@
 package com.andreicovaci.tjobs;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -46,11 +47,21 @@ public class SignUpController extends HttpServlet {
 			System.out.println(key + " : " + value[0]);
 		}
 		
+		PrintWriter out = response.getWriter();
+		
 		//response.getWriter().print( "<url>" + request.getContextPath() + "/signin.jsp" + "</url>");
+		
+		String message = "{\n" + 
+				"    \"isError\" : \"true\",\n" + 
+				"    \"errors\" : [\n" + 
+				"        {\"error\" : \"0\"},\n" + 
+				"        {\"error\" : \"1\"},\n" + 
+				"        {\"error\" : \"2\"}\n" + 
+				"    ]\n" + 
+				"}";
 		response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-		response.getWriter().print("{\"isError\" : \"true\"}");
-		
-		
+		response.setCharacterEncoding("UTF-8");
+		out.print(message);
+		out.flush();
 	}
 }
