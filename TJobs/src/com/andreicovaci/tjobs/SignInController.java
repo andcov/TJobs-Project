@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SignUpHandler
+ * Servlet implementation class SignInController
  */
-@WebServlet("/SignUpHandler")
-public class SignUpHandler extends HttpServlet {
+@WebServlet("/signincontroller")
+public class SignInController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SignUpHandler() {
+    public SignInController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,10 +35,7 @@ public class SignUpHandler extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
-		String s = request.getParameter("fname");
-		
-		System.out.print(s);
+		doGet(request, response);
 	}
 
 }
